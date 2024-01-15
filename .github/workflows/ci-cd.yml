@@ -1,0 +1,16 @@
+name: CI/CD Pipeline
+
+on:
+  repository_dispatch:
+    types: [manual_trigger]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Print Variable
+      run: echo "Name is ${{ github.event.device.name }}"
