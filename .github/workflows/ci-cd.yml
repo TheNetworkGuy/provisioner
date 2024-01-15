@@ -13,4 +13,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Print Variable
-      run: echo "Name is ${{ github.event.client_payload.name }}"
+      run: echo "Name is ${{ github.event.client_payload.hostname }}"
